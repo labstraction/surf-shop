@@ -1,0 +1,17 @@
+.container{
+  display: flex;
+  border: solid 1px;
+  padding: 8px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.img{
+  height: 50px;
+  width: 50px;
+}
+
+.data{
+  display: flex;
+  flex-direction: column;
+}

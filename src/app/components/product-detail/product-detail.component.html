@@ -1,0 +1,9 @@
+<div class="container" *ngIf="selectedProduct">
+<img src="{{selectedProduct.imageUrl}}" alt="">
+<h2>{{selectedProduct.name}}</h2>
+<p>{{selectedProduct.category}}</p>
+<p>{{selectedProduct.description}}</p>
+<p>{{selectedProduct.price}}</p>
+<p>{{selectedProduct.quantity}}</p>
+<button>Aggiungi al carrello</button>
+</div>
