@@ -35,4 +35,9 @@ export class UserService {
     this.user = undefined
   }
 
+  register(user: User){
+    //post
+    this.router.navigate(['/login'])
+  }
+
 }
