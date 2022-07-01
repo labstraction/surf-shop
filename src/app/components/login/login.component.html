@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="container">
+<h2>login</h2>
+<div>
+  <span>
+    mail
+  </span>
+  <input [(ngModel)]="mail" type="email" name="" id="">
+</div>
+<div>
+  <span>
+    password
+  </span>
+  <input [(ngModel)]="password" type="password" name="" id="">
+</div>
+<button (click)="login()" [disabled]="!mail || !password">LOGIN</button>
+</div>

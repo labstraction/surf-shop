@@ -9,6 +9,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LoginComponent } from './components/login/login.component';
     ProductsListComponent,
     ProductCardComponent,
     ProductDetailComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
