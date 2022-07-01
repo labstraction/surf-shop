@@ -3,7 +3,7 @@
     "name": "sequoia toro 5.5",
     "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
     "category": "tavole",
-    "price": "388.00",
+    "price": 388.00,
     "quantity": 94,
     "imageUrl": "https://www.sequoiasurfboards.com/wp-content/uploads/2021/07/Toro_Deck.png",
     "id": "1"
@@ -12,7 +12,7 @@
     "name": "star of surf 6.1",
     "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
     "category": "tavole",
-    "price": "628.00",
+    "price": 628.00,
     "quantity": 48,
     "imageUrl": "https://www.sequoiasurfboards.com/wp-content/uploads/2021/07/Toro_Deck.png",
     "id": "2"
@@ -21,7 +21,7 @@
     "name": "picture 3/2",
     "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
     "category": "mute",
-    "price": "378.00",
+    "price": 378.00,
     "quantity": 13,
     "imageUrl": "https://it.aquasphereswim.com/dw/image/v2/BDTB_PRD/on/demandware.static/-/Sites-aquasphere-m-catalog/default/dw9fe06cb7/images/products/su83901312xl_1.jpg?sw=1150&sh=1150",
     "id": "3"
@@ -30,7 +30,7 @@
     "name": "rip curl 3/5",
     "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
     "category": "mute",
-    "price": "321.00",
+    "price": 321.00,
     "quantity": 39,
     "imageUrl": "https://it.aquasphereswim.com/dw/image/v2/BDTB_PRD/on/demandware.static/-/Sites-aquasphere-m-catalog/default/dw9fe06cb7/images/products/su83901312xl_1.jpg?sw=1150&sh=1150",
     "id": "4"
@@ -39,7 +39,7 @@
     "name": "rusty what?",
     "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
     "category": "tavole",
-    "price": "820.00",
+    "price": 820.00,
     "quantity": 70,
     "imageUrl": "https://www.sequoiasurfboards.com/wp-content/uploads/2021/07/Toro_Deck.png",
     "id": "5"
@@ -48,7 +48,7 @@
     "name": "quiksilver x stranger things board shorts",
     "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
     "category": "abbigliamento",
-    "price": "88.00",
+    "price": 88.00,
     "quantity": 53,
     "imageUrl": "https://m.media-amazon.com/images/I/51Hj-MqV0xL.jpg",
     "id": "6"
@@ -57,7 +57,7 @@
     "name": "roxy 3/2",
     "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
     "category": "mute",
-    "price": "337.00",
+    "price": 337.00,
     "quantity": 98,
     "imageUrl": "https://it.aquasphereswim.com/dw/image/v2/BDTB_PRD/on/demandware.static/-/Sites-aquasphere-m-catalog/default/dw9fe06cb7/images/products/su83901312xl_1.jpg?sw=1150&sh=1150",
     "id": "7"
@@ -66,7 +66,7 @@
     "name": "o'neill shorts",
     "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
     "category": "abbigliamento",
-    "price": "38.00",
+    "price": 38.00,
     "quantity": 29,
     "imageUrl": "https://m.media-amazon.com/images/I/51Hj-MqV0xL.jpg",
     "id": "8"
@@ -75,7 +75,7 @@
     "name": "vissla seven seas 4/3",
     "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
     "category": "mute",
-    "price": "208.00",
+    "price": 208.00,
     "quantity": 33,
     "imageUrl": "https://it.aquasphereswim.com/dw/image/v2/BDTB_PRD/on/demandware.static/-/Sites-aquasphere-m-catalog/default/dw9fe06cb7/images/products/su83901312xl_1.jpg?sw=1150&sh=1150",
     "id": "9"
@@ -84,7 +84,7 @@
     "name": "softboard 8.0",
     "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
     "category": "tavole",
-    "price": "619.00",
+    "price": 619.00,
     "quantity": 37,
     "imageUrl": "https://www.sequoiasurfboards.com/wp-content/uploads/2021/07/Toro_Deck.png",
     "id": "10"
@@ -93,7 +93,7 @@
     "name": "billabong shorts",
     "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
     "category": "abbigliamento",
-    "price": "78.00",
+    "price": 78.00,
     "quantity": 29,
     "imageUrl": "https://m.media-amazon.com/images/I/51Hj-MqV0xL.jpg",
     "id": "8"
@@ -102,7 +102,7 @@
     "name": "rvca shorts",
     "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
     "category": "abbigliamento",
-    "price": "58.00",
+    "price": 58.00,
     "quantity": 29,
     "imageUrl": "https://m.media-amazon.com/images/I/51Hj-MqV0xL.jpg",
     "id": "8"

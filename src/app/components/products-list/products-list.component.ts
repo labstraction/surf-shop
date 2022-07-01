@@ -11,6 +11,9 @@ export class ProductsListComponent implements OnInit {
 
   public products: Product[] = [];
 
+  public searchString = ''
+  public selectedCategory = ''
+
   constructor(private pServ: ProductService) { }
 
 
@@ -19,9 +22,10 @@ export class ProductsListComponent implements OnInit {
   }
 
   search(){
-    const input = document.getElementById('search-input') as HTMLInputElement;
-    const searchString = input!.value.trim().toLowerCase();
-    this.pServ.getProducts(searchString).subscribe({
+    this.selectedCategory=''
+    // const input = document.getElementById('search-input') as HTMLInputElement;
+    // this.searchString = input!.value.trim().toLowerCase();
+    this.pServ.getProducts(this.searchString).subscribe({
       next: products => this.products = products,
       error: err => console.log(err)
     })
@@ -33,5 +37,21 @@ export class ProductsListComponent implements OnInit {
       error: err => console.log(err)
     })
   }
+  orderByPrice(){
+   this.products.sort((p1, p2)=> p1.price-p2.price)
+  }
 
+  orderByName(){
+  this.products.sort((p1, p2) => p1.name.localeCompare(p2.name))
+  }
+
+  filterByCategory(){
+    this.searchString= ''
+    // const select = document.getElementById('category-select') as HTMLSelectElement
+      this.pServ.getProducts(undefined, this.selectedCategory).subscribe({
+        next: products => this.products = products,
+        error: err => console.log(err)
+      })
+
+  }
 }

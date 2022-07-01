@@ -13,10 +13,13 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(searchString?: string):Observable<Product[]> {
-    let url = this.BASE_URL;
+  getProducts(searchString?: string, category?: string):Observable<Product[]> {
+    let url = this.BASE_URL + '?';
     if (searchString) {
-      url = this.BASE_URL + '?name=' + searchString;
+      url += 'name=' + searchString;
+    }
+    if(category){
+      url += '&catergory=' + category;
     }
     return this.http.get<Product[]>(url);
   }
