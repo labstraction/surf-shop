@@ -5,7 +5,7 @@ export interface User {
   dob: Date;
   email: string;
   password: string;
-  addres: string;
+  address: string;
   city: string;
   cardnumber: number;
   id: string;

@@ -1,1 +1,65 @@
+<form class="form" [formGroup]="registerForm" (ngSubmit)="register()">
 
+  <h3>Account data</h3>
+
+  <label for="email">email: </label>
+  <input id="email" type="text" formControlName="email">
+  <div *ngIf="!registerForm.get('email')!.valid && (registerForm.get('email')!.touched || registerForm.get('email')!.dirty)">
+    <span>mail obbligatoria</span>
+  </div>
+
+  <label for="username">username: </label>
+  <input id="username" type="text" formControlName="username">
+  <div *ngIf="!registerForm.get('username')!.valid && (registerForm.get('username')!.touched || registerForm.get('username')!.dirty)">
+    <span>username obbligatorio</span>
+  </div>
+
+  <label for="password">password: </label>
+  <input id="password" type="text" formControlName="password">
+  <div
+    *ngIf="!registerForm.get('password')!.valid && (registerForm.get('password')!.touched || registerForm.get('password')!.dirty)">
+    <span>password deve contenere almeno 8 caratteri</span>
+  </div>
+
+  <h3>Personal data</h3>
+
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="name">
+  <div
+    *ngIf="!registerForm.get('name')!.valid && (registerForm.get('name')!.touched || registerForm.get('name')!.dirty)">
+    <span>nome obbligatorio</span>
+  </div>
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="surname">
+  <div
+    *ngIf="!registerForm.get('surname')!.valid && (registerForm.get('surname')!.touched || registerForm.get('surname')!.dirty)">
+    <span>cognome obbligatorio</span>
+  </div>
+
+  <label for="dob">date of birth: </label>
+  <input id="dob" type="date" formControlName="dob">
+
+
+  <label for="city">city: </label>
+  <input id="city" type="text" formControlName="city">
+  <div
+    *ngIf="!registerForm.get('city')!.valid && (registerForm.get('city')!.touched || registerForm.get('city')!.dirty)">
+    <span>città obbligatoria</span>
+  </div>
+
+  <label for="address">address: </label>
+  <input id="address" type="text" formControlName="address">
+  <div *ngIf="!registerForm.get('address')!.valid && (registerForm.get('address')!.touched || registerForm.get('address')!.dirty)">
+    <span>indirizzo obbligatorio</span>
+  </div>
+
+  <label for="cardnumber">card: </label>
+  <input id="cardnumber" type="text" formControlName="cardnumber">
+  <div
+    *ngIf="!registerForm.get('cardnumber')!.valid && (registerForm.get('cardnumber')!.touched || registerForm.get('cardnumber')!.dirty)">
+    <span>numero carta deve contenere 12 cifre</span>
+  </div>
+
+  <button [disabled]="!registerForm.valid" type="submit">save</button>
+</form>

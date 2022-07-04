@@ -4,13 +4,13 @@
   <span>
     mail
   </span>
-  <input [(ngModel)]="mail" type="email" name="" id="">
+  <input [(ngModel)]="mail" type="email" name="" id="email">
 </div>
 <div>
   <span>
     password
   </span>
-  <input [(ngModel)]="password" type="password" name="" id="">
+  <input [(ngModel)]="password" type="password" name="" id="password">
 </div>
 <button (click)="login()" [disabled]="!mail || !password">LOGIN</button>
 </div>
