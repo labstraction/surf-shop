@@ -4,8 +4,7 @@
     <a routerLink="/product">prodotti</a>
     <a *ngIf="!userS.user" routerLink="/login">login</a>
     <a *ngIf="userS.user" (click)="logout()">logout</a>
-    <a routerLink="/register">register</a>
-    <a routerLink="/user" >user</a>
+    <a *ngIf="userS.user" routerLink="/user" >user</a>
   </nav>
   <!-- <h2 *ngIf="userS.user">Welcome Back {{userS.user.name}}</h2> -->
 </header>

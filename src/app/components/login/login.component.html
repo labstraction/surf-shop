@@ -13,4 +13,8 @@
   <input [(ngModel)]="password" type="password" name="" id="password">
 </div>
 <button (click)="login()" [disabled]="!mail || !password">LOGIN</button>
+
+<p>Non sei ancora registrato? <a routerLink="/register">Fallo subito!</a>
+</p>
+
 </div>
