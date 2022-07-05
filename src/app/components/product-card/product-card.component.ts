@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { UserService } from 'src/app/services/user/user.service';
 
@@ -11,7 +11,8 @@ export class ProductCardComponent implements OnInit {
 
   @Input() selectedProduct?: Product;
   @Input() isCart= false
-
+  @Output() productRemoved = new EventEmitter<Product>()
+  
   constructor(private userS: UserService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class ProductCardComponent implements OnInit {
   removeFromCart(){
     if(this.selectedProduct){
       this.userS.removeFromCart(this.selectedProduct)
+      this.productRemoved.emit(this.selectedProduct);
     }
   }
 

@@ -13,16 +13,19 @@ export class CartComponent implements OnInit {
   public products: Product[] = [];
 
   constructor(private userS: UserService, private prodS: ProductService) {
-    if (userS.user) {
-      prodS.getUserCart(userS.user).subscribe({
+    this.getUserCartProducts()
+  }
+
+  ngOnInit(): void {
+  }
+
+  getUserCartProducts(){
+    if (this.userS.user) {
+      this.prodS.getUserCart(this.userS.user).subscribe({
         next: res => this.products = res,
         error: err => console.log(err)
       })
     }
-
-  }
-
-  ngOnInit(): void {
   }
 
 }
