@@ -65,4 +65,12 @@ export class UserService {
       error: err => console.log(err)
     })
   }
+
+  removeFromCart(selectedProduct: Product) {
+    if(this.user?.cart){
+      this.user.cart = this.user.cart.filter(id => id !== selectedProduct.id);
+      this.updateUser();
+    }
+  }
+
 }
