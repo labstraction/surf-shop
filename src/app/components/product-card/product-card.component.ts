@@ -21,7 +21,6 @@ export class ProductCardComponent implements OnInit {
     if(this.selectedProduct){
       this.userS.removeFromCart(this.selectedProduct)
     }
-
   }
 
 }
