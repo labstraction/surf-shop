@@ -1,0 +1,16 @@
+.container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-image{
+  width: 50%;
+  min-width: 300px;
+
+}
+
+.detail-data{
+  width: 50%;
+  min-width: 300px;
+}

@@ -1,3 +1,5 @@
+import { Product } from "./product";
+
 export interface User {
   username: string;
   name: string;
@@ -9,4 +11,5 @@ export interface User {
   city: string;
   cardnumber: number;
   id: string;
+  cart?: string[];
 }

@@ -1,9 +1,14 @@
 <div class="container" *ngIf="selectedProduct">
-<img src="{{selectedProduct.imageUrl}}" alt="">
-<h2>{{selectedProduct.name}}</h2>
-<p>{{selectedProduct.category}}</p>
-<p>{{selectedProduct.description}}</p>
-<p>{{selectedProduct.price}}</p>
-<p>{{selectedProduct.quantity}}</p>
-<button>Aggiungi al carrello</button>
+  <img class="detail-image" src="{{selectedProduct.imageUrl}}" alt="">
+  <div class="detail-data">
+    <h2>{{selectedProduct.name}}</h2>
+    <p>Categoria: {{selectedProduct.category}}</p>
+    <p>{{selectedProduct.description}}</p>
+    <p>Prezzo: {{selectedProduct.price | currency: "€"}}</p>
+    <p>Quantità: {{selectedProduct.quantity}}</p>
+    <button (click)="addToCart()" *ngIf="userS.user">Aggiungi al carrello</button>
+    <button routerLink="/login"  *ngIf="!userS.user">Fai login per acquistare</button>
+    <!-- <button>{{userS.user? "ciao utente" : "niente utente"}}</button> -->
+  </div>
+
 </div>
