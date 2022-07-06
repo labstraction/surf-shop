@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   public products: Product[] = [];
 
   constructor(private userS: UserService, private prodS: ProductService) {
-    this.getUserCartProducts()
+    this.getUserCartProducts();
   }
 
   ngOnInit(): void {
@@ -27,5 +27,4 @@ export class CartComponent implements OnInit {
       })
     }
   }
-
 }

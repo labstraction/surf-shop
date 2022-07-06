@@ -10,19 +10,20 @@ import { UserService } from 'src/app/services/user/user.service';
 export class ProductCardComponent implements OnInit {
 
   @Input() selectedProduct?: Product;
-  @Input() isCart= false
-  @Output() productRemoved = new EventEmitter<Product>()
-  
+  @Input() isCart= false;
+  @Output() productRemoved = new EventEmitter<Product>();
+
   constructor(private userS: UserService) { }
 
   ngOnInit(): void {
   }
 
-  removeFromCart(){
+  removeFromCart(event: MouseEvent){
+    console.log(event);
+    event.stopPropagation();
     if(this.selectedProduct){
-      this.userS.removeFromCart(this.selectedProduct)
+      this.userS.removeFromCart(this.selectedProduct);
       this.productRemoved.emit(this.selectedProduct);
     }
   }
-
 }
