@@ -1,4 +1,5 @@
 <div class="container" *ngIf="userS.user">
+  
   <span>{{userS.user!.username}}</span>
   <span>{{userS.user!.email}}</span>
   <span>{{userS.user!.surname}}</span>
@@ -7,4 +8,14 @@
   <span>{{userS.user!.address}}</span>
   <span>{{userS.user!.city}}</span>
   <span>{{userS.user!.cardnumber}}</span>
+
+  <div *ngIf="userS.user.orders">
+    <h3>Storico ordini:</h3>
+    <div *ngFor="let order of userS.user.orders" class="order-container">
+      <span>{{order.date | date}}</span>
+      <span>{{order.total | currency: '€'}}</span>
+      <span *ngFor="let product of order.products">{{product}}</span>
+    </div>
+  </div>
+
 </div>

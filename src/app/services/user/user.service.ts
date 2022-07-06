@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Order } from 'src/app/model/order';
 import { Product } from 'src/app/model/product';
 import { User } from 'src/app/model/user';
 
@@ -8,7 +9,6 @@ import { User } from 'src/app/model/user';
   providedIn: 'root'
 })
 export class UserService {
-
 
   private readonly BASE_URL = 'https://62bd594ebac21839b6010d22.mockapi.io/users'
 
@@ -54,12 +54,12 @@ export class UserService {
       }
       this.user.cart.push(product.id);
       this.updateUser();
-      this.user = {...this.user};
+      this.user = { ...this.user };
     }
 
   }
 
-  updateUser(){
+  updateUser() {
     const url = this.BASE_URL + "/" + this.user?.id;
     this.http.put<User>(url, this.user, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe({
       next: result => console.log(result),
@@ -68,7 +68,7 @@ export class UserService {
   }
 
   removeFromCart(selectedProduct: Product) {
-    if(this.user?.cart){
+    if (this.user?.cart) {
       const index = this.user.cart.indexOf(selectedProduct.id);
       if (index >= 0) {
         this.user.cart.splice(index, 1);
@@ -76,6 +76,18 @@ export class UserService {
       // this.user.cart = this.user.cart.filter(id => id !== selectedProduct.id);
       this.updateUser();
       this.user = { ...this.user };
+    }
+  }
+  
+  saveOrder(date: Date, productsNames: string[], total: number) {
+    if (this.user) {
+      if (!this.user.orders) {
+        this.user.orders = [];
+      }
+      const newOrder: Order = {date: date, total: total, products: productsNames};
+      this.user.orders.push(newOrder);
+      this.updateUser();
+      this.user = {...this.user};
     }
   }
 
