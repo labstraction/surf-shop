@@ -23,7 +23,7 @@ export class MultiColorDirective {
   @HostListener('mouseout')
   onMouseOut() {
     clearInterval(this.colorInterval);
-    this.el.nativeElement.style.backgroundColor = 'crimson';
+    // this.el.nativeElement.style.backgroundColor = 'crimson';
   }
 
   constructor(private el: ElementRef) {

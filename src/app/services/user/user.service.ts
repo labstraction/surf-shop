@@ -78,7 +78,7 @@ export class UserService {
       this.user = { ...this.user };
     }
   }
-  
+
   saveOrder(date: Date, productsNames: string[], total: number) {
     if (this.user) {
       if (!this.user.orders) {

@@ -30,8 +30,9 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
-    console.log(this.registerForm.value);
-    this.userS.register(this.registerForm.value)
+    const user = this.registerForm.value;
+    // delete user.passwordConfirm;
+    this.userS.register(user)
   }
 
   nowForInput(): string {
